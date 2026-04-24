@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content="Interaktive Analyse deines Putzmeister Zeitnachweises — Transparenz, Fehlererkennung und Trends." />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+    <title>Zeitnachweis — Analyse</title>
+    <script type="module" crossorigin src="/Program Files/Git/zeitnachweis-app/assets/index-DppLXAVc.js"></script>
+    <link rel="modulepreload" crossorigin href="/Program Files/Git/zeitnachweis-app/assets/dexie-BODkcwel.js">
+    <link rel="modulepreload" crossorigin href="/Program Files/Git/zeitnachweis-app/assets/datefns-Dq49jaKA.js">
+    <link rel="modulepreload" crossorigin href="/Program Files/Git/zeitnachweis-app/assets/chartjs-CRgZvhTJ.js">
+    <link rel="modulepreload" crossorigin href="/Program Files/Git/zeitnachweis-app/assets/pdfjs-BDGsuRSB.js">
+    <link rel="stylesheet" crossorigin href="/Program Files/Git/zeitnachweis-app/assets/index-87Bs9Mlu.css">
+  </head>
+  <body>
+    <div id="app">
+      <aside id="sidebar" aria-label="Hauptnavigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div class="brand-name">Zeitnachweis</div>
+        </div>
+        <nav class="nav">
+          <a href="#/" data-route="/" class="nav-item"><span class="nav-icon">▥</span>Dashboard</a>
+          <a href="#/analytics" data-route="/analytics" class="nav-item"><span class="nav-icon">▣</span>Analytics</a>
+          <a href="#/monat" data-route="/monat" class="nav-item"><span class="nav-icon">▦</span>Monate</a>
+          <a href="#/woche" data-route="/woche" class="nav-item"><span class="nav-icon">▤</span>Wochen</a>
+          <a href="#/berichtsheft" data-route="/berichtsheft" class="nav-item"><span class="nav-icon">◫</span>Berichtsheft</a>
+          <a href="#/mails" data-route="/mails" class="nav-item"><span class="nav-icon">✉</span>Mail-Vorlagen</a>
+          <a href="#/profil" data-route="/profil" class="nav-item"><span class="nav-icon">◉</span>Profil</a>
+          <a href="#/daten" data-route="/daten" class="nav-item"><span class="nav-icon">⬆</span>Daten</a>
+          <a href="#/einstellungen" data-route="/einstellungen" class="nav-item"><span class="nav-icon">⚙</span>Einstellungen</a>
+        </nav>
+        <div class="sidebar-footer">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Theme umschalten" title="Theme umschalten">
+            <span class="theme-icon-light">☀</span>
+            <span class="theme-icon-dark">☾</span>
+            <span class="theme-label">Auto</span>
+          </button>
+        </div>
+      </aside>
+      <main id="content" aria-live="polite">
+        <div class="loading-screen">
+          <div class="loader-ring" aria-hidden="true"></div>
+          <p>Wird geladen…</p>
+        </div>
+      </main>
+    </div>
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
