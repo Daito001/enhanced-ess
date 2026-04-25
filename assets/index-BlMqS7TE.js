@@ -932,7 +932,7 @@ Vielen Dank!`,s=new URLSearchParams;return s.set("cc","anika.kailer@putzmeister.
               </button>
               <a class="btn-mail-big" id="btn-fahrtgeld-mail" href="${w(Et(M.mk))}" target="_blank" rel="noopener" ${M.bs.length===0?'aria-disabled="true"':""}>
                 <img src="outlook-logo.png" alt="" class="outlook-logo-big" />
-                <span>Mail an Frau Mayer</span>
+                <span>Mail</span>
               </a>
             </div>
             <div class="fahrtgeld-generate-info" id="fahrtgeld-generate-info">
