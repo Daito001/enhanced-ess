@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="color-scheme" content="dark" />
     <meta name="description" content="Enhanced ESS — Interaktive Analyse deines Zeitnachweises. Transparenz, Fehlererkennung und Trends." />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
     <title>Enhanced ESS</title>
-    <script type="module" crossorigin src="/zeitnachweis-app/assets/index-WHSPyMEc.js"></script>
+    <script type="module" crossorigin src="/zeitnachweis-app/assets/index-DJUE7i2G.js"></script>
     <link rel="modulepreload" crossorigin href="/zeitnachweis-app/assets/dexie-BODkcwel.js">
     <link rel="modulepreload" crossorigin href="/zeitnachweis-app/assets/datefns-Dlft8rFK.js">
     <link rel="modulepreload" crossorigin href="/zeitnachweis-app/assets/chartjs-CRgZvhTJ.js">
     <link rel="modulepreload" crossorigin href="/zeitnachweis-app/assets/pdfjs-BDGsuRSB.js">
-    <link rel="stylesheet" crossorigin href="/zeitnachweis-app/assets/index-DgrDSEjC.css">
+    <link rel="stylesheet" crossorigin href="/zeitnachweis-app/assets/index-Dsbhnn2G.css">
   </head>
   <body>
     <div id="bg-decoration" aria-hidden="true">
@@ -29,7 +29,22 @@
     <div id="app">
       <aside id="sidebar" aria-label="Hauptnavigation">
         <div class="brand">
-          <div class="brand-mark" aria-hidden="true"></div>
+          <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--accent)"/>
+                <stop offset="100%" stop-color="var(--chart-2)"/>
+              </linearGradient>
+              <filter id="brand-glow"><feGaussianBlur stdDeviation="0.6"/></filter>
+            </defs>
+            <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#brand-grad)"/>
+            <path class="brand-grid-line" d="M 5 22 H 27" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-linecap="round"/>
+            <path class="brand-grid-line" d="M 5 16 H 27" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-linecap="round"/>
+            <path class="brand-trend" d="M 6 23 Q 11 23 13 18 T 26 7" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="brand-dot" cx="6" cy="23" r="1.6" fill="white"/>
+            <circle class="brand-dot" cx="13" cy="18" r="1.6" fill="white"/>
+            <circle class="brand-dot brand-dot-pulse" cx="26" cy="7" r="2.2" fill="white" filter="url(#brand-glow)"/>
+          </svg>
           <div class="brand-name">Enhanced ESS</div>
         </div>
         <nav class="nav">
@@ -40,13 +55,7 @@
           <a href="#/daten" data-route="/daten" class="nav-item"><span class="nav-icon icon-sprite icon-daten"></span>Daten</a>
           <a href="#/einstellungen" data-route="/einstellungen" class="nav-item"><span class="nav-icon icon-sprite icon-einstellungen"></span>Einstellungen</a>
         </nav>
-        <div class="sidebar-footer">
-          <button id="theme-toggle" class="theme-toggle" aria-label="Theme umschalten" title="Theme umschalten">
-            <span class="theme-icon-light">☀</span>
-            <span class="theme-icon-dark">☾</span>
-            <span class="theme-label">Auto</span>
-          </button>
-        </div>
+        <div class="sidebar-footer"></div>
       </aside>
       <main id="content" aria-live="polite">
         <div class="loading-screen">
