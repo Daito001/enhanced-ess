@@ -9,12 +9,12 @@
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
     <title>Enhanced ESS</title>
-    <script type="module" crossorigin src="/enhanced-ess/assets/index-BU6Wm0lU.js"></script>
+    <script type="module" crossorigin src="/enhanced-ess/assets/index-C1ZtEDvp.js"></script>
     <link rel="modulepreload" crossorigin href="/enhanced-ess/assets/dexie-BODkcwel.js">
     <link rel="modulepreload" crossorigin href="/enhanced-ess/assets/datefns-Dlft8rFK.js">
     <link rel="modulepreload" crossorigin href="/enhanced-ess/assets/chartjs-CRgZvhTJ.js">
     <link rel="modulepreload" crossorigin href="/enhanced-ess/assets/pdfjs-BDGsuRSB.js">
-    <link rel="stylesheet" crossorigin href="/enhanced-ess/assets/index-Da6GeA-E.css">
+    <link rel="stylesheet" crossorigin href="/enhanced-ess/assets/index-wvdFXyLe.css">
   </head>
   <body>
     <div id="bg-decoration" aria-hidden="true">
@@ -29,23 +29,18 @@
     <div id="app">
       <aside id="sidebar" aria-label="Hauptnavigation">
         <div class="brand">
-          <svg class="brand-mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="var(--accent)"/>
-                <stop offset="100%" stop-color="var(--chart-2)"/>
-              </linearGradient>
-              <filter id="brand-glow"><feGaussianBlur stdDeviation="0.6"/></filter>
-            </defs>
-            <rect x="0" y="0" width="32" height="32" rx="9" fill="url(#brand-grad)"/>
-            <path class="brand-grid-line" d="M 5 22 H 27" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-linecap="round"/>
-            <path class="brand-grid-line" d="M 5 16 H 27" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-linecap="round"/>
-            <path class="brand-trend" d="M 6 23 Q 11 23 13 18 T 26 7" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle class="brand-dot" cx="6" cy="23" r="1.6" fill="white"/>
-            <circle class="brand-dot" cx="13" cy="18" r="1.6" fill="white"/>
-            <circle class="brand-dot brand-dot-pulse" cx="26" cy="7" r="2.2" fill="white" filter="url(#brand-glow)"/>
-          </svg>
-          <div class="brand-name">Enhanced ESS</div>
+          <div class="brand-pill">
+            <span class="brand-pill-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 4 16 L 9 11 L 13 14 L 20 7"/>
+                <path d="M 14 7 H 20 V 13"/>
+              </svg>
+              <span class="brand-pill-icon-pulse"></span>
+            </span>
+            <span class="brand-pill-text">
+              Enhanced<span class="brand-pill-text-accent">ESS</span>
+            </span>
+          </div>
         </div>
         <nav class="nav">
           <a href="#/" data-route="/" class="nav-item"><span class="nav-icon icon-sprite icon-dashboard"></span>Dashboard</a>
