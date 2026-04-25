@@ -924,7 +924,7 @@ Fortfahren?`)){s.style.pointerEvents="",s.style.opacity="",n.innerHTML=`
       </div>
     `}
 
-    <input type="file" id="fahrtgeld-replace-input" accept=".xlsx" style="display: none;" />
+    <input type="file" id="fahrtgeld-replace-input" accept=".xlsx,.xls,.xlsm,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" style="display: none;" />
   `,(d=e.querySelector("#btn-template-replace"))==null||d.addEventListener("click",()=>{e.querySelector("#fahrtgeld-replace-input").click()}),(u=e.querySelector("#fahrtgeld-replace-input"))==null||u.addEventListener("change",async h=>{var m;const f=(m=h.target.files)==null?void 0:m[0];f&&await ea(f,e)}),(g=e.querySelector("#btn-template-clear"))==null||g.addEventListener("click",async()=>{confirm("Vorlage wirklich löschen? Beim nächsten Öffnen wirst du gebeten, eine neue hochzuladen.")&&(await Za(),P("Vorlage gelöscht."),Qe({root:e}))}),e.querySelectorAll(".fahrtgeld-generieren").forEach(h=>{h.addEventListener("click",async()=>{const f=h.getAttribute("data-monat"),m=parseInt(h.getAttribute("data-offen")||"0",10),b=h.getAttribute("data-offen-liste")||"";if(m>0&&!confirm(`Achtung: Laut deinem Schul-Rhythmus kommen in diesem Monat noch ${m} BS-Tag${m===1?"":"e"}:
 
 ${b}
@@ -945,7 +945,7 @@ Trotzdem jetzt für die bisher erfassten Tage generieren?`))return;h.disabled=!0
         wir tauschen jeden Monat nur Datums und Beträge aus.
       </p>
       <button class="btn primary lg" id="btn-template-upload">Vorlage auswählen</button>
-      <input type="file" id="fahrtgeld-upload-input" accept=".xlsx" style="display: none;" />
+      <input type="file" id="fahrtgeld-upload-input" accept=".xlsx,.xls,.xlsm,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" style="display: none;" />
     </div>
   `,(t=e.querySelector("#btn-template-upload"))==null||t.addEventListener("click",()=>{e.querySelector("#fahrtgeld-upload-input").click()}),(a=e.querySelector("#fahrtgeld-upload-input"))==null||a.addEventListener("change",async n=>{var i;const s=(i=n.target.files)==null?void 0:i[0];s&&await ea(s,e)})}async function ea(e,t){try{const a=await e.arrayBuffer(),n=await Js(a);if(!n.ok){Q(`Vorlage nicht erkannt: ${n.fehler}`,{type:"error",duration:8e3});return}await ja({bytes:a,konstanten:n.konstanten,hochgeladenAm:new Date().toISOString(),dateiname:e.name}),P(`Vorlage gespeichert: ${n.konstanten.name||e.name}`),Qe({root:t})}catch(a){console.error("Vorlage-Upload fehlgeschlagen:",a),Q(`Fehler beim Verarbeiten: ${a.message||a}`,{type:"error",duration:8e3})}}async function ni({root:e}){const t=await B();if(!t.length){e.innerHTML='<h1 class="view-title">Berichtsheft</h1><p class="view-subtitle">Keine Daten.</p><a href="#/daten" class="btn primary">Zum Upload</a>';return}const a=[...new Set(t.map(i=>i.monatKey))].sort().reverse();e.innerHTML=`
     <h1 class="view-title">Berichtsheft-Export</h1>
