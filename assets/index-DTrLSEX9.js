@@ -418,23 +418,27 @@ Wenn du fortfährst, werden alle alten Tagesdaten gelöscht und durch die neuen 
     <form id="profil-form" class="grid cols-2" style="gap: 24px;">
       <div class="card">
         <h2>Alter</h2>
-        <label class="checkbox-row">
-          <input type="checkbox" name="ueber18" ${t.ueber18?"checked":""} />
-          <span>
+        <label class="switch-row">
+          <span class="switch">
+            <input type="checkbox" name="ueber18" id="ueber18-switch" ${t.ueber18?"checked":""} />
+            <span class="switch-track" aria-hidden="true"></span>
+            <span class="switch-thumb" aria-hidden="true"></span>
+          </span>
+          <span class="switch-row-label">
             <strong>Über 18</strong>
-            <p class="hint" style="margin: 4px 0 0;">Bestimmt die anzuwendende Pausen-Regel. Angehakt → ArbZG (Erwachsene). Leer → JArbSchG (Minderjährige, strengere Pausen-Pflicht).</p>
+            <p class="hint">Bestimmt die anzuwendende Pausen-Regel. An → ArbZG (Erwachsene). Aus → JArbSchG (Minderjährige, strengere Pausen-Pflicht).</p>
           </span>
         </label>
 
         <label class="switch-row" style="margin-top: 16px;">
-          <span class="switch-row-label">
-            <strong>Azubi Features</strong>
-            <p class="hint">Fahrgelderstattung und Berufsschul-Erkennung. ${a?`Aus deinem PDF erkannt: Mitarbeiterkreis <code>${Xi(a)}</code> → Standardmäßig <strong>${String(a).trim().toUpperCase()==="AZ"?"an":"aus"}</strong>.`:"Wird automatisch aus dem Mitarbeiterkreis im Zeitnachweis abgeleitet (AZ = Azubi)."}</p>
-          </span>
           <span class="switch">
             <input type="checkbox" id="azubi-switch" ${n?"checked":""} />
             <span class="switch-track" aria-hidden="true"></span>
             <span class="switch-thumb" aria-hidden="true"></span>
+          </span>
+          <span class="switch-row-label">
+            <strong>Azubi Features</strong>
+            <p class="hint">Fahrgelderstattung und Berufsschul-Erkennung. ${a?`Aus deinem PDF erkannt: Mitarbeiterkreis <code>${Xi(a)}</code> → Standardmäßig <strong>${String(a).trim().toUpperCase()==="AZ"?"an":"aus"}</strong>.`:"Wird automatisch aus dem Mitarbeiterkreis im Zeitnachweis abgeleitet (AZ = Azubi)."}</p>
           </span>
         </label>
       </div>
